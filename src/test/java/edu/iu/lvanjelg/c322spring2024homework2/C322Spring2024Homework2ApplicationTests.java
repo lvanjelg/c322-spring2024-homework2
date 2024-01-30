@@ -1,13 +1,21 @@
-package edu.iu.lvanjelg.c322spring2024homework2;
+package edu.iu.lvanjelg.c322spring2024homework2.controllers;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class C322Spring2024Homework2ApplicationTests {
+import static org.junit.jupiter.api.Assertions.*;
 
-	@Test
-	void contextLoads() {
-	}
+class InventoryControllerTest {
 
+    @Test
+    void search() {
+
+    }
+
+    @Test
+    void getGuitar() {
+    }
+
+    @Test
+    void addGuitar() {
+    }
 }
