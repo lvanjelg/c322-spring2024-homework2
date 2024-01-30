@@ -24,7 +24,7 @@ class InventoryControllerTest {
         g.setPrice(1600);
         g.setSerialNumber("130");
         InventoryController.addGuitar(g);
-        assertTrue(InventoryController.getGuitar("130") != null);
+        assertEquals(g.getSerialNumber(),InventoryController.getGuitar("130").getSerialNumber());
     }
 
     @Test
