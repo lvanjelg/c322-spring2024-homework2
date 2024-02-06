@@ -4,7 +4,7 @@ import java.io.IOException;
 public class Inventory {
     public static ArrayList<Guitar> guitars = new ArrayList<>();
 
-    public static void addGuitar(String serial, double price, String builder, String model, String type, String backWood, String topWood){
+    public static void addGuitar(String serial, double price, Guitar.Builder builder, String model, Guitar.Type type, Guitar.Wood backWood, Guitar.Wood topWood){
         try{
             FileWriter guitarDB = new FileWriter("guitars_database.txt");
             guitarDB.write(serial + ", " + price + ", " + builder + ", " + model + ", " + type + ", " + backWood + ", " + topWood);

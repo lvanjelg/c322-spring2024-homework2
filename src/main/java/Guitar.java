@@ -1,6 +1,7 @@
 public class Guitar {
     public static String serialNumber;
     public static double price;
+    public static Builder builder;
     public static enum Builder{
         FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;
         public String toString(){
@@ -12,11 +13,12 @@ public class Guitar {
                 case OLSON: return "Olson";
                 case RYAN: return "Ryan";
                 case PRS: return "PRS";
-                default: return "Unspecified";
+                default: return "unspecified";
             }
         }
     }
     public static String model;
+    public static Type type;
     public static enum Type{
         ACOUSTIC, ELECTRIC;
         public String toString(){
@@ -27,38 +29,25 @@ public class Guitar {
             }
         }
     }
-    public static enum backWood{
+    public static Wood backWood;
+    public static enum Wood{
         INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE, COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA;
         public String toString(){
             switch(this){
                 case INDIAN_ROSEWOOD: return "Indian Rosewood";
                 case BRAZILIAN_ROSEWOOD: return "Brazilian Rosewood";
-                case MAHOGONY: return "Mahogany";
+                case MAHOGANY: return "Mahogany";
                 case MAPLE: return "Maple";
                 case COCOBOLO: return "Cocobolo";
                 case CEDAR: return "Cedar";
                 case ADIRONDACK: return "Adirondack";
                 case ALDER: return "Alder";
                 case SITKA: return "Sitka";
+                default: return "unspecified";
             }
         }
     }
-    public static enum topWood {
-        INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE, COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA;
-        public String toString(){
-            switch(this){
-                case INDIAN_ROSEWOOD: return "Indian Rosewood";
-                case BRAZILIAN_ROSEWOOD: return "Brazilian Rosewood";
-                case MAHOGONY: return "Mahogany";
-                case MAPLE: return "Maple";
-                case COCOBOLO: return "Cocobolo";
-                case CEDAR: return "Cedar";
-                case ADIRONDACK: return "Adirondack";
-                case ALDER: return "Alder";
-                case SITKA: return "Sitka";
-            }
-        }
-    }
+    public static Wood topWood;
 
     public static String getSerialNumber(){
         return serialNumber;
@@ -69,19 +58,19 @@ public class Guitar {
     public static void setPrice(double p){
         price = p;
     }
-    public static String getBuilder(){
+    public static Builder getBuilder(){
         return builder;
     }
     public static String getModel(){
         return model;
     }
-    public static String getType(){
+    public static Type getType(){
         return type;
     }
-    public static String getBackWood(){
+    public static Wood getBackWood(){
         return backWood;
     }
-    public static String getTopWood(){
+    public static Wood getTopWood(){
         return topWood;
     }
 }
