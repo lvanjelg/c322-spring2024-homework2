@@ -1,3 +1,9 @@
 1235, 1200.0, Fender, C3, electric, Cedar, Maple
 1238, 1250.0, Fender, C3, electric, Mahogany, Maple
 1274, 1300.0, Gibson, B4, electric, Mahogany, Cedar
+130, 1600.0, Gibson, B3, electric, Cedar, Alder
+140, 1300.0, Fender, B4, electric, Cedar, Alder
+130, 1600.0, Fender, B3, electric, Cedar, Alder
+130, 1600.0, Gibson, B3, electric, Cedar, Alder
+140, 1300.0, Fender, B4, electric, Cedar, Alder
+130, 1600.0, Fender, B3, electric, Cedar, Alder

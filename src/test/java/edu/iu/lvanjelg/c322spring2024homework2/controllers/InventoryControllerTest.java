@@ -19,10 +19,6 @@ class InventoryControllerTest {
          */
     }
     @Test
-    void findAll(){
-        System.out.println(InventoryController.findAll().size());
-    }
-    @Test
     void getGuitar() {
         Guitar g = new Guitar("130",1600, "Fender","B3", "Electric", "Cedar", "Alder");
         InventoryController.addGuitar(g);
