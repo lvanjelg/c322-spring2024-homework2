@@ -33,6 +33,7 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: true
+
       - name: Build and push the image
         run:
           docker login --username lvanjelg --password ${{secrets.ACCESS_TOKEN}} ghcr.io
