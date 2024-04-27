@@ -1,6 +1,13 @@
 package edu.iu.lvanjelg.c322spring2024homework2.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(schema="guitar",name="guitars")
 public class Guitar {
+    @Id
     private String serialNumber;
     private double price;
     private Builder builder;
@@ -50,6 +57,7 @@ public class Guitar {
     }
     private Wood backWood;
     private Wood topWood;
+    public Guitar(){}
     public Guitar(String serialNumber, double price, String builder, String model, String type, String backWood, String topWood){
         this.serialNumber = serialNumber;
         this.price = price;
