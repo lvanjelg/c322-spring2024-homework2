@@ -43,7 +43,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.cors(Customizer.withDefaults()).csrf(x->x.disable()).authorizeHttpRequests(
                 auth->auth.requestMatchers(HttpMethod.POST,"/signup","/signin").permitAll()
-                        .requestMatchers(HttpMethod.GET,"/").permitAll().anyRequest().authenticated())
+                        .requestMatchers(HttpMethod.GET,"/","/guitar").permitAll().anyRequest().authenticated())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .oauth2ResourceServer((oauth2)->oauth2.jwt(Customizer.withDefaults())).build();
     }
